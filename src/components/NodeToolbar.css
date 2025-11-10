@@ -1,0 +1,117 @@
+.node-toolbar {
+  width: 280px;
+  background: white;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.node-toolbar-header {
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.node-toolbar-header h3 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.node-toolbar-header p {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.node-toolbar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.node-toolbar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+  background: #f8fafc;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: grab;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.node-toolbar-item:hover {
+  background: white;
+  border-color: #e2e8f0;
+  transform: translateX(4px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.node-toolbar-item:active {
+  cursor: grabbing;
+  transform: scale(0.98);
+}
+
+.node-toolbar-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 6px;
+  color: #3b82f6;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.node-toolbar-item:hover .node-toolbar-item-icon {
+  color: #2563eb;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.node-toolbar-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.node-toolbar-item-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.node-toolbar-item-subtitle {
+  font-size: 11px;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 스크롤바 스타일 */
+.node-toolbar-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.node-toolbar-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.node-toolbar-content::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.node-toolbar-content::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

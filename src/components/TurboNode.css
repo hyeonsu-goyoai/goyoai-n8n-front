@@ -1,0 +1,120 @@
+.turbo-node {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  min-width: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.turbo-node:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.turbo-node.selected {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.turbo-node.disabled {
+  opacity: 0.6;
+  background: #f8fafc;
+}
+
+.turbo-node-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.turbo-node-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.turbo-node.disabled .turbo-node-icon {
+  background: #e2e8f0;
+  color: #94a3b8;
+}
+
+.turbo-node-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.turbo-node-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1e293b;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.turbo-node-subtitle {
+  font-size: 12px;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.turbo-node-disabled-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.turbo-node-notes {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #94a3b8;
+  cursor: help;
+}
+
+/* Handle 스타일 */
+.turbo-handle {
+  width: 10px;
+  height: 10px;
+  background: #3b82f6;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.turbo-handle:hover {
+  background: #2563eb;
+  transform: scale(1.2);
+}
+
+.turbo-handle-target {
+  left: -5px;
+}
+
+.turbo-handle-source {
+  right: -5px;
+}
+
+/* 드래그 중 스타일 */
+.turbo-node.dragging {
+  opacity: 0.8;
+  cursor: grabbing;
+}
